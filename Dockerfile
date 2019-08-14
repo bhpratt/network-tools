@@ -1,14 +1,22 @@
 FROM alpine:latest
 
-RUN apk add --no-cache \
-    curl \
-    nano \
+RUN apk update &&\
+    apk upgrade &&\
+    apk add --no-cache \
     bash \
-    vim \
-    #nslookup, dig, ping, etc.
-    iputils \
-    mtr \
-    #host
+    bash-doc \
     bind-tools \
     #telnet
     busybox-extras \
+    curl \
+    curl-doc \
+    grep \
+    #nslookup, dig, ping, etc.
+    iputils \
+    #host
+    man \
+    man-pages \
+    mtr \
+    nano \
+    openssl \
+    vim \
