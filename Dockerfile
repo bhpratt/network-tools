@@ -7,6 +7,7 @@ RUN apk update &&\
     apk add --no-cache \
     bash \
     bash-doc \
+    #host
     bind-tools \
     #telnet
     busybox-extras \
@@ -15,7 +16,6 @@ RUN apk update &&\
     grep \
     #nslookup, dig, ping, etc.
     iputils \
-    #host
     man \
     man-pages \
     mtr \
