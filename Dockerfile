@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+MAINTAINER Baker Pratt
+
 RUN apk update &&\
     apk upgrade &&\
     apk add --no-cache \
