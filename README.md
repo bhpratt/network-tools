@@ -6,6 +6,7 @@ Docker image with networking debugging tools, including:
 - ping
 - mtr
 - nslookup
+- openssl
 - telnet
 - traceroute
 - wget
