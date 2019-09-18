@@ -15,13 +15,41 @@ Docker image with networking debugging tools, including:
 
 # How to run
 
+## Docker
+
+`docker run --rm -it bhpratt/network-tools bash`
+
 ## Kubernetes
 
 `kubectl run --rm networkdebug -it --generator=run-pod/v1 --image bhpratt/network-tools bash`
 
-## Docker
+## Deployment YAML
 
-`docker run --rm -it bhpratt/network-tools bash`
+If you want to run the container as a pod in a Kubernetes deployment, you must add a long-running command. Otherwise, the pod will exit.
+
+Example:
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: network-tools
+spec:
+  selector:
+    matchLabels:
+      app: network-tools
+  replicas: 1
+  template:
+    metadata:
+      name: network-tools
+      labels:
+        app: network-tools
+    spec:
+      containers:
+        - name: network-tools
+          image: bhpratt/network-tools
+          command: ["/bin/sleep","5000"]
+```
 
 # Use Case
 
