@@ -18,9 +18,9 @@ RUN apk update &&\
     iproute2 \
     #nslookup, dig, ping, etc.
     iputils \
-    man \
+    mandoc \
     man-pages \
     mtr \
     nano \
     openssl \
-    vim
+    vim \
