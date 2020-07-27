@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Baker Pratt
+LABEL maintainer="bakerpratt"
 
 RUN apk update &&\
     apk upgrade &&\
@@ -14,6 +14,8 @@ RUN apk update &&\
     curl \
     curl-doc \
     grep \
+    #ss (replacement for netstat)
+    iproute2 \
     #nslookup, dig, ping, etc.
     iputils \
     man \
