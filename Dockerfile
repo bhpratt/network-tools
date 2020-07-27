@@ -23,4 +23,4 @@ RUN apk update &&\
     mtr \
     nano \
     openssl \
-    vim \
+    vim
