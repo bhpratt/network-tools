@@ -21,7 +21,7 @@ Docker image with networking debugging tools, including:
 
 ## Kubernetes
 
-`kubectl run --rm networkdebug -it --generator=run-pod/v1 --image bhpratt/network-tools bash`
+`kubectl run --rm networkdebug -it --image bhpratt/network-tools bash`
 
 ## Deployment YAML
 
